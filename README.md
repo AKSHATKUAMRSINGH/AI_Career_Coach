@@ -1,3 +1,75 @@
+RAG LAB — The Science of Smart Document Processing
+An interactive 45-minute self-learning notebook on Text Chunking and Document Processing for RAG.
+Files
+- RAG_Chunking_Lab.ipynb — interactive lesson and coding playground.
+- requirements.txt — dependencies.
+- EXPLANATION_VIDEO_SCRIPT.md — suggested 5–7 minute walkthrough.
+Run in Google Colab (recommended)
+1. Download RAG_Chunking_Lab.ipynb.
+2. Open https://colab.research.google.com/.
+3. Select File → Upload notebook and upload the notebook.
+4. If dependencies are missing, run %pip install ipywidgets scikit-learn.
+5. Run cells from top to bottom with Shift+Enter or choose Runtime → Run all.
+6. Use the chunking sliders, retrieval controls, challenge, and quiz.
+Run locally on Windows
+No Docker, WSL, GPU, API key, or paid model is required.
+1. Install Python 3.10+ from https://www.python.org/downloads/.
+2. Open Command Prompt in the extracted folder.
+3. Run:py -m venv .venv
+   .venv\\Scripts\\activate
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+   jupyter notebook
+4. Open RAG_Chunking_Lab.ipynb and run cells in order.
+5. If widgets fail in classic Notebook, use JupyterLab or Google Colab.
+Dependencies
+- ipywidgets — interactive controls.
+- scikit-learn — TF-IDF and cosine similarity.
+- notebook and ipykernel — local notebook runtime.
+45-minute pacing
+Section	Time
+The problem	4 min
+Chunking fundamentals	6 min
+Interactive playground	9 min
+Document processing	6 min
+Retrieval simulator	8 min
+Hands-on challenge	7 min
+Knowledge check	5 min
+Total	45 min
+
+
+Technical limitations
+- The splitter counts words, not model-specific tokens. Production systems should use the relevant tokenizer or structure-aware splitting.
+- Retrieval uses TF-IDF lexical similarity, not semantic embeddings. It may miss synonyms and paraphrases.
+- The sample corpus is synthetic educational content, not official university policy.
+- This is a teaching prototype, not a production ingestion service.
+- Production systems should add robust PDF/DOCX parsing, OCR, structure-aware splitting, access-control filtering, versioning, embeddings, a vector store, evaluation, and observability.
+- Similarity scores are ranking signals, not proof that a chunk answers a question.
+Publish on GitHub
+1. Create a public repository named rag-chunking-lab.
+2. Put the notebook, README, requirements, and video script in the repository.
+3. In Command Prompt/terminal from this folder:git init
+   git add .
+   git commit -m "Add interactive RAG chunking learning lab"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/rag-chunking-lab.git
+   git push -u origin main
+4. Replace YOUR_USERNAME with your GitHub username.
+5. Add this badge near the top of README, replacing the username:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/rag-chunking-lab/blob/main/RAG_Chunking_Lab.ipynb)
+6. Test the badge in an incognito window. GitHub's notebook preview is static; run the notebook in Colab/Jupyter for interactive controls.
+7. Add your explanation-video link to the README or submission form, as appropriate.
+Final quality checklist
+- [ ] Notebook opens in Colab.
+- [ ] Run all cells in a fresh runtime.
+- [ ] Chunking controls update output.
+- [ ] Retrieval question and top-k controls update ranked results.
+- [ ] Challenge controls run.
+- [ ] Quiz scores answers and explains them.
+- [ ] No API keys or private data are included.
+- [ ] README setup instructions work.
+- [ ] Public GitHub repository and Colab badge work.
+- [ ] Video demonstrates the artifact and explains design trade-offs.
+
 # array.prototype.flatmap <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![github actions][actions-image]][actions-url]
